@@ -4,6 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.29418.71
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageBoard", "MessageBoard\MessageBoard.csproj", "{ECFBC3A8-6EE5-416D-B953-2249BE5AB71F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{55BEB34C-8705-40F5-8F0A-ECD04972A274} = {55BEB34C-8705-40F5-8F0A-ECD04972A274}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServiceCtrl", "WebServiceCtrl\WebServiceCtrl.csproj", "{55BEB34C-8705-40F5-8F0A-ECD04972A274}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +20,10 @@ Global
 		{ECFBC3A8-6EE5-416D-B953-2249BE5AB71F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ECFBC3A8-6EE5-416D-B953-2249BE5AB71F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ECFBC3A8-6EE5-416D-B953-2249BE5AB71F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55BEB34C-8705-40F5-8F0A-ECD04972A274}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55BEB34C-8705-40F5-8F0A-ECD04972A274}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55BEB34C-8705-40F5-8F0A-ECD04972A274}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55BEB34C-8705-40F5-8F0A-ECD04972A274}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

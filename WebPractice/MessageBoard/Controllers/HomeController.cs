@@ -10,6 +10,9 @@ namespace MessageBoard.Controllers
     {
         public ActionResult Index()
         {
+
+
+
             return View();
         }
 
@@ -25,6 +28,18 @@ namespace MessageBoard.Controllers
             ViewBag.Message = "Your contact page.";
              
             return View();
+        }
+
+
+        public ActionResult ClickAction()
+        {
+            Service1.WebServiceFET_APISoapClient fet_api = new Service1.WebServiceFET_APISoapClient();
+            
+            
+            string str = fet_api.HelloWorld();
+            ViewBag.Message = str;
+
+            return View("Index");
         }
     }
 }
