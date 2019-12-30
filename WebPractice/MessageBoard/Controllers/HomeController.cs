@@ -34,11 +34,12 @@ namespace MessageBoard.Controllers
         public ActionResult ClickAction()
         {
             //Service1.WebServiceFET_APISoapClient fet_api = new Service1.WebServiceFET_APISoapClient();
-            FET_API.WebServiceFET_API fet_api = new FET_API.WebServiceFET_API();
+            //FET_API.WebServiceFET_API fet_api = new FET_API.WebServiceFET_API();
 
-            //string str = "Hello World";
 
-            //ViewBag.Message = fet_api.HelloWorld();
+
+            string str = Guid.NewGuid().ToString("N");
+            ViewBag.Message = str;
 
             return View("Index");
         }
