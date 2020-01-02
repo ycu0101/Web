@@ -52,7 +52,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interator\InteratorClass.cs" />
+    <Compile Include="Interator\InteratorQuery.cs" />
     <Compile Include="Interator\InteratorTest.cs" />
+    <Compile Include="Interator\OrignalQuery.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="_DB\Category.cs">

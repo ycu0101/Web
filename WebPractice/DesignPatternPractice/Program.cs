@@ -15,40 +15,33 @@ namespace DesignPatternPractice
 
         static void Main(string[] args)
         {
-            double t1;
+            timer.Start();
+            //InteratorQuery q1 = new InteratorQuery();
+            //Console.WriteLine("TimeQ1 : {0}", q1.Query());
+            timer.Stop();
 
-            #region Interator vs Normal Query
-            //timer.Reset();
-            ////Normal Query
-            //var list_linq = _nw.Orders.Select(_o => new OrderList { OrderID = _o.OrderID, CustomerID = _o.CustomerID });
-            //timer.Start();
-            //foreach (var item in list_linq)
-            //{
-            //    Console.WriteLine("OrderID : {0}, Customer : {1}\t||\t", item.OrderID, item.CustomerID);
-            //}
-            //timer.Stop();
-            //t1 = timer.Elapsed.TotalMilliseconds;
-
-            //Console.WriteLine("\n========================================\n");
+            var k = timer.Elapsed.TotalMilliseconds;
 
             timer.Reset();
-            //Use Interator
-            IEnumerable<OrderList> list_linq2 = _nw.Orders.Select(_o => new OrderList { OrderID = _o.OrderID, CustomerID = _o.CustomerID });
-            timer.Start();
-            //IEnumerator<Order> list_interator = list_linq2.GetEnumerator();
-            foreach (OrderList item in new InteratorTest(list_linq2))
-            {
-                Console.WriteLine("OrderID : {0}, Customer : {1}\t||\t", item.OrderID, item.CustomerID);
-            }
-            timer.Stop();
-            t1 = timer.Elapsed.TotalMilliseconds;
-            #endregion
 
+            //OrignalQuery q2 = new OrignalQuery();
+            //Console.WriteLine("TimeQ2 : {0}", q2.Query());
 
+            List<string> list1 = new List<string>();
+            List<string> list2 = null;
 
-            Console.WriteLine("Time1 : {0}", t1);
+            Console.WriteLine("List1 => Count : {0}\tAny : {1}", list1.Count, list1.Any());
+            //發生 null Exception，只要沒有實體就無法使用這些 function
+            //Console.WriteLine("List2 => Count : {0}\tAny : {1}", list2.Count(), list2.Any());
+
             Console.Write("\nOver...");
             Console.ReadKey();
+        }
+
+        public class DicClass
+        {
+            public string xx1;
+            public string xx2;
         }
     }
 
