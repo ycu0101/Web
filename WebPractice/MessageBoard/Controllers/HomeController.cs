@@ -8,19 +8,41 @@ namespace MessageBoard.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        [HttpGet]
+        public ActionResult Index(FormCollection get)
         {
-
+            if (get.Count > 0)
+            {
+                ViewBag.Message = get["hi"].ToString();
+            }
+            else
+            {
+                ViewBag.Title = "Welcome !";
+                ViewBag.Message = "Nothing";
+                ViewBag.Url1 = "Google";
+                ViewBag.Url2 = "Facebook";
+                ViewBag.Url3 = "Instagram";
+            }
 
 
             return View();
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
 
-            return View();
+
+        public ActionResult About(FormCollection get)
+        {
+
+
+            if (get .Count >0)
+            {
+                return RedirectToAction("Contact", "Home");
+            }
+            else
+            {
+                ViewBag.Message = get["hi"].ToString();
+                return View();
+            }
         }
 
         public ActionResult Contact()
