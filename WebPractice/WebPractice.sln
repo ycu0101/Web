@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageBoard", "MessageBoar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatternPractice", "DesignPatternPractice\DesignPatternPractice.csproj", "{56964AFF-CC13-4981-8A3E-1000FF3B32C6}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SQL_Test", "SQL_Test\SQL_Test.sqlproj", "{1A3DA3CB-47AD-459E-B3C0-95B7FCBCD458}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,12 @@ Global
 		{56964AFF-CC13-4981-8A3E-1000FF3B32C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56964AFF-CC13-4981-8A3E-1000FF3B32C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56964AFF-CC13-4981-8A3E-1000FF3B32C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A3DA3CB-47AD-459E-B3C0-95B7FCBCD458}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A3DA3CB-47AD-459E-B3C0-95B7FCBCD458}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A3DA3CB-47AD-459E-B3C0-95B7FCBCD458}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{1A3DA3CB-47AD-459E-B3C0-95B7FCBCD458}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A3DA3CB-47AD-459E-B3C0-95B7FCBCD458}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A3DA3CB-47AD-459E-B3C0-95B7FCBCD458}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
