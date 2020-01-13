@@ -43,8 +43,9 @@ namespace MessageBoard
                     action = "About",
                     id = UrlParameter.Optional
                 },
-                constraints: new { action = "About" } //限制只有 About 會被比對到，其餘會到其他的 Route 去，在沒有就到 Default 去
+                constraints: new { action = "About" }, //限制只有 About 會被比對到，其餘會到其他的 Route 去，在沒有就到 Default 去
                 // constraints: new { action = "(About|Contact)" }  => 可利用 Regex 語法(正規表示式)同時允許 About 以及 Contact
+                namespaces: new[] {"MessageBoard.Controllers"} //限制只有命名空間一樣才會比對成功
             );
 
             routes.MapRoute(
@@ -52,6 +53,7 @@ namespace MessageBoard
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
 
         }
     }
