@@ -12,6 +12,8 @@ namespace MessageBoard
     {
         protected void Application_Start()
         {
+            //var newURL = RouteTable.Routes.GetVirtualPathForArea(Request.RequestContext, new RouteValueDictionary(new object { page = 1 })).VirtualPath;
+
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
