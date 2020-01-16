@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 組件的一般資訊會透過將設定 
 // 控制。變更這些屬性值可修改與組件關聯的
 // 資訊。
-[assembly: AssemblyTitle("MessageBoard")]
+[assembly: AssemblyTitle("WebTest")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MessageBoard")]
+[assembly: AssemblyProduct("WebTest")]
 [assembly: AssemblyCopyright("Copyright (C)  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 下列 GUID 為專案公開 (Expose) 至 COM 時所要使用的 typelib ID
-[assembly: Guid("5c6f3e15-190c-4905-b66c-520468b59b5e")]
+[assembly: Guid("c9b8b92b-8c69-4db9-a0a3-f60b01921621")]
 
 // 組件的版本資訊是由下列四項值構成:
 //
