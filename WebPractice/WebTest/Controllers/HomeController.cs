@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebTest.EnumCode;
 
 namespace WebTest.Controllers
 {
@@ -10,6 +11,10 @@ namespace WebTest.Controllers
     {
         public ActionResult Index()
         {
+
+            //Session[SessionTestID.First.ToString()] = "The Test For Session string";
+            Session.Add(SessionTestID.First.ToString(), "TestForSession");
+
             return View();
         }
 
