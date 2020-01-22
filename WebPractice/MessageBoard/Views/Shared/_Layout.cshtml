@@ -35,9 +35,10 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
+        @*<footer>
             <p>&copy; @DateTime.Now.Year - 我的 ASP.NET 應用程式</p>
-        </footer>
+        </footer>*@
+        @RenderSection("footer", required: false)
     </div>
 
     @Scripts.Render("~/bundles/jquery")

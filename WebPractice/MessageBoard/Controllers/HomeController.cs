@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MessageBoard.App_Code;
 
 namespace MessageBoard.Controllers
 {
@@ -10,6 +11,7 @@ namespace MessageBoard.Controllers
     {
         public ActionResult Index()
         {
+            Session[(int)TestEnum.test] = "Hi";
             return View();
         }
 
