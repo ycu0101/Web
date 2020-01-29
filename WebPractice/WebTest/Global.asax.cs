@@ -16,6 +16,9 @@ namespace WebTest
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            //新增其他套件的方式
+            //ViewEngines.Engines.Insert(0, new RazorView());
         }
     }
 }
