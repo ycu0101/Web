@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebTest.EnumCode;
+using WebTest.ViewModels;
 
 namespace WebTest.Controllers
 {
@@ -15,7 +16,25 @@ namespace WebTest.Controllers
             //Session[SessionTestID.First.ToString()] = "The Test For Session string";
             Session.Add(SessionTestID.First.ToString(), "TestForSession");
 
-            return View();
+            TestViewModel test_model = new TestViewModel();
+            test_model.test_list = new List<TestViewModel>();
+
+            for (int i = 0; i < 10; i++)
+            {
+                TestViewModel tmp = new TestViewModel();
+                tmp.A = "Hello ";
+                tmp.B = "Mother ";
+                tmp.C = "Fucker ";
+
+                test_model.test_list.Add(tmp);
+
+
+            }
+
+            string test = DateTime.Parse("").ToString("yyyy-MM-dd HH:mm:ss");
+
+
+            return View(test_model);
         }
 
         public ActionResult About()
