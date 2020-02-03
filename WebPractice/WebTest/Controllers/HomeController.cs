@@ -8,8 +8,15 @@ using WebTest.ViewModels;
 
 namespace WebTest.Controllers
 {
+    public class test
+    {
+        public string t1 { get; set; }
+        public string t2 { get; set; }
+    }
+
     public class HomeController : Controller
     {
+
         public ActionResult Index()
         {
 
@@ -27,11 +34,13 @@ namespace WebTest.Controllers
                 tmp.C = "Fucker ";
 
                 test_model.test_list.Add(tmp);
-
-
             }
 
-            string test = DateTime.Parse("").ToString("yyyy-MM-dd HH:mm:ss");
+
+            test abc = new test();
+            Session["object"] = abc;
+
+            //string test = DateTime.Parse("").ToString("yyyy-MM-dd HH:mm:ss");
 
 
             return View(test_model);
