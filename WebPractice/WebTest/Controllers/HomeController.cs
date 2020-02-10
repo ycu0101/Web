@@ -19,43 +19,40 @@ namespace WebTest.Controllers
 
         public ActionResult Index()
         {
+            Session["TEST"] = "SESSION TEST";
 
-            //Session[SessionTestID.First.ToString()] = "The Test For Session string";
-            Session.Add(SessionTestID.First.ToString(), "TestForSession");
-
-            TestViewModel test_model = new TestViewModel();
-            test_model.test_list = new List<TestViewModel>();
-
-            for (int i = 0; i < 10; i++)
-            {
-                TestViewModel tmp = new TestViewModel();
-                tmp.A = "Hello ";
-                tmp.B = "Mother ";
-                tmp.C = "Fucker ";
-
-                test_model.test_list.Add(tmp);
-            }
-
-
-            test abc = new test();
-            Session["object"] = abc;
-
-            //string test = DateTime.Parse("").ToString("yyyy-MM-dd HH:mm:ss");
-
-
-            return View(test_model);
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
 
             return View();
+        }
+
+        [HttpPost]
+        public string Subscribe(FormCollection get)
+        {
+            if (get.HasKeys())
+            {
+                ViewBag.Title = "Ajax Post Test";
+            }
+            else
+            {
+                ViewBag.Title = "Ajax Get Test";
+            }
+
+            return "/Home/Contact";
         }
 
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+
+        public ActionResult About()
+        {
+            if (Session["TEST"] == null)
+            {
+                Session["TEST"] = "NO SESSION";
+            }
 
             return View();
         }
